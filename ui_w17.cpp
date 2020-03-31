@@ -176,7 +176,7 @@ int g_panel_width;
 #define MENU_COLOR5 0xFFFF80FF
 #define MENU_PANEL_WIDTH 160
 
-#define MENU_PANEL_COLOR 0x20d6f3ff    // MENU底框 
+#define MENU_PANEL_COLOR 0x80d6f3ff    // MENU底框 
 #define MENU_PANEL_BORDER_COLOR 0xFF0f4a63 //MENU外框 
 void init_menu()
 {
@@ -384,9 +384,9 @@ menu 字体 enable			3460fa
 				{
 				    MENU_2K(L"CTRL+1 载具", VK_CONTROL, '1', o->IsShowCar),
 				    MENU_2K(L"CTRL+2 尸体", VK_CONTROL, '2', o->IsShowDeadBox),
-                    MENU_2K(L"CTRL+3 武器", VK_CONTROL, '3', o->IsShowGun),
-					MENU_2K(L"CTRL+4 弹药", VK_CONTROL, '4', o->IsShowItemBullet),
-					MENU_2K(L"CTRL+5 其他", VK_CONTROL, '5', o->IsShowItemOther),
+                   // MENU_2K(L"CTRL+3 武器", VK_CONTROL, '3', o->IsShowGun),
+					//MENU_2K(L"CTRL+4 弹药", VK_CONTROL, '4', o->IsShowItemBullet),
+					//MENU_2K(L"CTRL+5 其他", VK_CONTROL, '5', o->IsShowItemOther),
 
 			    }, []() { return is_show_item(); }
 		    },
