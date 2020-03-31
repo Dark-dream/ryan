@@ -9,7 +9,7 @@
 #include "change_skin.h"
 #include "decryptFuncOffset.h"
 
-#if __W5
+#if __W17
 
 #define PLAYER_INFO_FONT_SIZE 11	//更低就看不清楚了
 #define MENU_FONT_SIZE 10
@@ -171,12 +171,12 @@ int g_panel_width;
 
 #define MENU_COLOR 0xFF598294   //字体
 #define MENU_COLOR2 0xFF3460fa  //字体选中
-#define MENU_COLOR3 0xFFEEEEEE  
+#define MENU_COLOR3 0xFF598294  
 #define MENU_COLOR4 0xFFFF8080
 #define MENU_COLOR5 0xFFFF80FF
-#define MENU_PANEL_WIDTH 160
+#define MENU_PANEL_WIDTH 150
 
-#define MENU_PANEL_COLOR 0x80d6f3ff    // MENU底框 
+#define MENU_PANEL_COLOR 0xFFd6f3ff    // MENU底框 
 #define MENU_PANEL_BORDER_COLOR 0xFF0f4a63 //MENU外框 
 void init_menu()
 {
