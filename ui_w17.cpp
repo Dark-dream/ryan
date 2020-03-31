@@ -169,14 +169,14 @@ int g_panel_x;
 int g_panel_y;
 int g_panel_width;
 
-#define MENU_COLOR 0xFF598294   //字体
+#define MENU_COLOR 0xFFb8bfc2   //字体
 #define MENU_COLOR2 0xFF3460fa  //字体选中
-#define MENU_COLOR3 0xFF598294  
+#define MENU_COLOR3 0xFFb8bfc2   
 #define MENU_COLOR4 0xFFFF8080
 #define MENU_COLOR5 0xFFFF80FF
-#define MENU_PANEL_WIDTH 150
+#define MENU_PANEL_WIDTH 140
 
-#define MENU_PANEL_COLOR 0xFFd6f3ff    // MENU底框 
+#define MENU_PANEL_COLOR 0x10d6f3ff    // MENU底框 
 #define MENU_PANEL_BORDER_COLOR 0xFF0f4a63 //MENU外框 
 void init_menu()
 {
@@ -275,7 +275,7 @@ SHIFT+右键锁头
 
 menu 底色			d6f3ff
 menu border			0f4a63
-menu 字体			598294
+menu 字体			b8bfc2
 menu 字体 enable			3460fa
 人物近	方框+骨骼		ff0000
 人物远	方框+骨骼		3399ff
@@ -384,9 +384,9 @@ menu 字体 enable			3460fa
 				{
 				    MENU_2K(L"CTRL+1 载具", VK_CONTROL, '1', o->IsShowCar),
 				    MENU_2K(L"CTRL+2 尸体", VK_CONTROL, '2', o->IsShowDeadBox),
-                   // MENU_2K(L"CTRL+3 武器", VK_CONTROL, '3', o->IsShowGun),
-					//MENU_2K(L"CTRL+4 弹药", VK_CONTROL, '4', o->IsShowItemBullet),
-					//MENU_2K(L"CTRL+5 其他", VK_CONTROL, '5', o->IsShowItemOther),
+                 //   MENU_2K(L"CTRL+3 武器", VK_CONTROL, '3', o->IsShowGun),
+				//	MENU_2K(L"CTRL+4 弹药", VK_CONTROL, '4', o->IsShowItemBullet),
+				//	MENU_2K(L"CTRL+5 其他", VK_CONTROL, '5', o->IsShowItemOther),
 
 			    }, []() { return is_show_item(); }
 		    },
@@ -513,6 +513,7 @@ void draw_menu(std::vector<menu_item>* menu)
 
 			if (color == MENU_COLOR) wcscpy_s(mark, _strw(L"✕"));
 			if (color == MENU_COLOR2) wcscpy_s(mark, _strw(L"✓"));
+			if (color == MENU_COLOR3) wcscpy_s(mark, _strw(L""));
 
 			DrawData::DrawString(g_menu_x, g_menu_y, font_size, color, _textw(L"%s %s"), msg.c_str(), mark);
 		}
